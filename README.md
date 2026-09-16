@@ -130,6 +130,33 @@ We welcome contributions! Here's how you can get involved:
 5. Open a pull request.
 
 ---
+## 中文简介
+CIS-Sentinel 是一款基于CIS安全基准的自动化主机审计工具，支持 Windows 11、Ubuntu、RHEL系统。
+脚本自动检查主机安全配置，输出合规审计报告，帮助运维/安全人员快速发现系统安全基线漏洞。
+
+## 运行依赖
+### Windows
+- PowerShell 5.1 / PowerShell 7
+- 需要管理员权限运行
+
+### Linux
+- Bash shell
+- 用户需要拥有sudo管理员权限
+
+## 快速启动
+### Windows
+1. 右键开始菜单，选择【Windows PowerShell(管理员)】
+2. 进入脚本所在文件夹
+```powershell
+.\cis_audit_windows.ps1
+```
+### Linux (Ubuntu / RHEL)
+1.打开终端（Terminal）
+2.进入项目文件夹
+```bash
+cd CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems
+sudo bash cis_audit_linux.sh
+```
 
 ## 📜 License
 
