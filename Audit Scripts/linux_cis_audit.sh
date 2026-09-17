@@ -20,9 +20,10 @@ users=$(grep '/bin/bash' /etc/passwd | cut -d: -f1)
 for user in $users
 do
     # 获取用户密码有效期
-    expire_info=$(chage -M $user 2>/dev/null)
     max_days=$(chage -l $user | grep "Maximum number of days" | cut -d: -f2 | xargs)
-    if [ -z "$max_days" ] || [ "$max_days" -gt $MAX_DAY ];then
+    if [ "$max_days" = "never" ] || [ -z "$max_days" ];then
+        echo "[警告] 用户 $user 密码永不过期，违反CIS基线（要求最长90天）"
+    elif [ "$max_days" -gt $MAX_DAY ];then
         echo "[警告] 用户 $user 密码最长有效期：$max_days 天，超过CIS规定90天上限"
     else
         echo "[合规] 用户 $user 密码最长有效期：$max_days 天，符合CIS基线"
