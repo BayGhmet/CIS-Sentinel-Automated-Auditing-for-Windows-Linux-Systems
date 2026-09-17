@@ -158,6 +158,11 @@ cd CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems
 sudo bash cis_audit_linux.sh
 ```
 
+### 审计运行示例
+执行Linux审计脚本，自动检测SSH Root登录权限，输出CIS基线合规检测结果；
+![审计运行截图](https://github.com/BayGhmet/CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems/blob/main/audit_result.png)
+
+
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for full details.
