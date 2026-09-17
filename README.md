@@ -158,9 +158,17 @@ cd CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems
 sudo bash cis_audit_linux.sh
 ```
 
-### 审计运行示例
-执行Linux审计脚本，自动检测SSH Root登录权限，输出CIS基线合规检测结果；
-![审计运行截图](https://github.com/BayGhmet/CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems/blob/main/audit_result.png)
+
+## 📌 Linux审计脚本新增功能
+新增CIS基线审计模块：
+1. SSH Root登录权限检测，检查是否允许root通过SSH远程登录
+2. 用户密码最长有效期检测，识别密码永不过期等不合规配置
+
+### 📷 运行输出示例
+![Linux审计运行截图](https://github.com/BayGhmet/CIS-Sentinel-Automated-Auditing-for-Windows-Linux-Systems/blob/main/linux_audit_result.png)
+
+> 说明：截图为Ubuntu虚拟机执行审计脚本输出，标记出系统不符合CIS安全基线的风险项。
+
 
 
 ## 📜 License
